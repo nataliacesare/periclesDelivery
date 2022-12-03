@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./assets/CSS/style.css" type="text/css">
+    <title>Pericles Delivery</title>
+    <script>
+        function valida_entrada(){
+            const url= new URLSearchParams(window.location.search)
+            let acesso = url.get("acesso")
+
+            if (acesso === 1){
+                //mostrar msg de boas vindas -> tem mais de 18 anos
+                document.getElementById("textoEntrada").innerHTML= "Olá! Gostaria de te dar boas vindas a Cervejaria do Pericles. <br> Aqui você encontrará as melhores bebidas do Brasil!"
+
+            }else{
+                // mostrar msg sem acesso -> menos de 18 anos
+                document.getElementById("textoEntrada").innerHTML="Sinto muito, mas este site só é permitido para maiores de 18 anos!"
+            }
+        }
+    </script>
+    </head>
+<body onload="valida_entrada()">
+    
+    <h1 id="textoEntrada"> </h1>
+   
+    
+</body>
+</html>
